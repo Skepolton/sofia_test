@@ -60,11 +60,13 @@ class NewsTable extends Entity\DataManager
     public static function onAfterAdd(Entity\Event $event)
     {
         self::clearCache();
+        self::notifyToAdmin($event);
     }
 
     public static function onAfterUpdate(Entity\Event $event)
     {
         self::clearCache();
+        self::notifyToAdmin($event);
     }
 
     public static function onAfterDelete(Entity\Event $event)
@@ -78,6 +80,14 @@ class NewsTable extends Entity\DataManager
             $cache = \Bitrix\Main\Data\Cache::createInstance();
             $cache->cleanDir("sofia_news_list");
         }
+    }
+
+    public static function notifyToAdmin(Entity\Event $event)
+    {
+        $fields = $event->getParameter("fields");
+        $email_to = \COption::GetOptionString("main", "email_from");
+            //Закомментирую что бы не спамить
+            //mail($email_to,"Добавлена статья на сайте таком то","На сайте таком то добавлена статья с id : ".$fields["ID]); // тут ссылку на элемент еще добавить можно
     }
 
 }

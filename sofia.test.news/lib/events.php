@@ -1,9 +1,6 @@
 <?php
 namespace Sofia\Test\News;
 
-// Класс события
-// Для примера выводит поля при каком-либо действии (в регистраторе задано перед добавлением)
-
 class Events
 {
     public static function modifyAdminMenu(&$adminMenu, &$moduleMenu)
