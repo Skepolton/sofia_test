@@ -1,0 +1,20 @@
+#global_menu_sofia {
+    padding-top: 10px;
+}
+#global_menu_sofia .adm-main-menu-item-icon 
+{    
+    background: no-repeat url(icons/sofia/sofia_logo.svg) 50% 0/contain;
+    content: "";
+    width: 43px;
+    height: 25px;
+    margin: 0 auto;
+    margin-top:15px;
+}
+
+.sofia_menu_icon {
+    background: no-repeat url(icons/sofia/sofia_logo.svg) 50% 0/contain;
+    content: "";
+    margin-right: 10px;
+    margin-left: 5px !important;
+    margin-top: 8px !important;
+}

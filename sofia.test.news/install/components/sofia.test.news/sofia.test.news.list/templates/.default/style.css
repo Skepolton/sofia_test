@@ -1,0 +1,11 @@
+.news_element {
+    margin-bottom:10px;
+    width:80%;
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.news_element .date {
+    color:gray;
+    font-size: small;
+}
